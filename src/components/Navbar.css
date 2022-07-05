@@ -1,0 +1,25 @@
+.navbar {
+    width: 100%;
+    background-color: #1d3557;
+    color: #fff;
+    padding: 25px 15px;
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+.title {
+    margin-right: auto;
+    font-size: bold;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    margin-right: 1em;
+    color: inherit;
+}
