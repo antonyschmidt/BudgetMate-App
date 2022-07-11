@@ -1,0 +1,27 @@
+.balance-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    max-height: 400px;
+    margin-right: 20px;
+    border: 1px solid lightgray;
+    box-shadow: 4px 4px 4px lightgray;
+}
+
+.balance-box h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.balance-box h3 {
+    font-size: 2rem;
+    color: grey;
+}
+
+.balance-box p {
+    font-size: 4rem;
+    color: green;
+}

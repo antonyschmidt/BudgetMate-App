@@ -2,10 +2,10 @@
 import { BrowserRouter } from 'react-router-dom'
 import { Route, Switch } from 'react-router'
 // pages
-import Home from './pages/Home'
-import Signup from './pages/Signup'
-import Login from './pages/Login'
-import Show from './pages/Show'
+import Home from './pages/home/Home'
+import Signup from './pages/signup/Signup'
+import Login from './pages/login/Login'
+import Show from './pages/show/Show'
 //components
 import Navbar from './components/Navbar'
 

@@ -1,0 +1,8 @@
+.homepage {
+    max-width: 1800px;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 30px;
+}

@@ -15,7 +15,9 @@
 
 .title {
     margin-right: auto;
-    font-size: bold;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .navbar ul li a {
