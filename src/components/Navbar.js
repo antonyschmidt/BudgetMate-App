@@ -21,11 +21,6 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link to='/addtransaction'>
-                        Add Trans -
-                    </Link>
-                </li>
-                <li>
                     <Link to='/login'>
                         Login
                     </Link>

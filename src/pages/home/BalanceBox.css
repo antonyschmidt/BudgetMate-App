@@ -6,6 +6,7 @@
     box-sizing: border-box;
     max-height: 400px;
     margin-right: 20px;
+    padding: 100px;
     border: 1px solid lightgray;
     box-shadow: 4px 4px 4px lightgray;
 }
