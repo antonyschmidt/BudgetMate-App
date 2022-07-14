@@ -21,8 +21,8 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link to='/show'>
-                        Show
+                    <Link to='/addtransaction'>
+                        Add Trans -
                     </Link>
                 </li>
                 <li>

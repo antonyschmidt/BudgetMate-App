@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router'
 import Home from './pages/home/Home'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
-import Show from './pages/show/Show'
+import AddTrans from './pages/addTrans/AddTrans'
 //components
 import Navbar from './components/Navbar'
 
@@ -20,8 +20,8 @@ export default function App() {
           <Route exact path='/'>
             <Home />
           </Route>
-          <Route path='/show'>
-            <Show />
+          <Route exact path='/addtransaction'>
+            <AddTrans />
           </Route>
           <Route path='/signup'>
             <Signup />
