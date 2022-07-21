@@ -1,11 +1,9 @@
 //hooks
 import { useRef, useState, useEffect } from 'react'
-import { useFetch } from '../../hooks/useFetch'
 // styles
 import styles from './TransactionList.css'
 
-export default function TransactionList({ totalSpending, setTotalSpending }) {
-    const { data: transactions, error, isPending } = useFetch('http://localhost:3000/transactions')
+export default function TransactionList({ totalSpending, setTotalSpending, url, transactions, isPending, error }) {
 
     useEffect(() => {
 

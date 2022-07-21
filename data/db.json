@@ -1,34 +1,74 @@
 {
-    "transactions": [
-        {
-            "title": "Pineapple",
-            "price": 16,
-            "id": "1"
-        },
-        {
-            "title": "Oranges",
-            "price": 4,
-            "id": "2"
-        },
-        {
-            "title": "Milk",
-            "price": 3,
-            "id": "3"
-        },
-        {
-            "title": "Tomatoes",
-            "price": 5,
-            "id": "4"
-        },
-        {
-            "title": "Carrots",
-            "price": 7,
-            "id": "5"
-        },
-        {
-            "title": "Avocados",
-            "price": 10,
-            "id": "6"
-        }
-    ]
+  "transactions": [
+    {
+      "title": "Pineapple",
+      "price": 16,
+      "id": "1"
+    },
+    {
+      "title": "Oranges",
+      "price": 4,
+      "id": "2"
+    },
+    {
+      "title": "Milk",
+      "price": 3,
+      "id": "3"
+    },
+    {
+      "title": "Tomatoes",
+      "price": 5,
+      "id": "4"
+    },
+    {
+      "title": "Carrots",
+      "price": 7,
+      "id": "5"
+    },
+    {
+      "title": "Avocados",
+      "price": 10,
+      "id": "6"
+    },
+    {
+      "title": "Coconut",
+      "price": 4,
+      "id": "sMx5Ez1"
+    },
+    {
+      "title": "Oats",
+      "price": 2,
+      "id": "N3I1OUz"
+    },
+    {
+      "title": "Coconut",
+      "price": 3,
+      "id": "5XiYwp1"
+    },
+    {
+      "title": "Melon",
+      "price": 4,
+      "id": "R1A7Hdb"
+    },
+    {
+      "title": "Boss",
+      "price": 4,
+      "id": "ESOcK6s"
+    },
+    {
+      "title": "Mango",
+      "price": 3,
+      "id": "cUIsZ8x"
+    },
+    {
+      "title": "Peanuts",
+      "price": 5,
+      "id": "Y2q4yn5"
+    },
+    {
+      "title": "Rasberries",
+      "price": 4,
+      "id": "EEGrejY"
+    }
+  ]
 }

@@ -1,5 +1,6 @@
 //hooks
 import { useRef, useEffect, useState } from 'react'
+import { useFetch } from '../../hooks/useFetch'
 //styles
 import styles from './Home.css'
 //components
@@ -10,6 +11,13 @@ import AddTrans from './AddTrans'
 export default function Home() {
     const [balance, setBalance] = useState(300)
     const [totalSpending, setTotalSpending] = useState(0)
+    const url = 'http://localhost:3000/transactions'
+    const { data: transactions, error, isPending } = useFetch(url)
+
+    // useEffect(() => {
+    //     setBalance(300)
+    //     setTotalSpending(0)
+    // }, [])
 
     const _balance = useRef(balance)
 
@@ -22,11 +30,15 @@ export default function Home() {
 
     return (
         <div className='homepage'>
-            <div className='sidebar-container'>
-                <BalanceBox balance={balance} />
-                <AddTrans />
-            </div>
-            <TransactionList totalSpending={totalSpending} setTotalSpending={setTotalSpending} />
+            {transactions &&
+                <>
+                    <div className='sidebar-container'>
+                        <BalanceBox balance={balance} />
+                        <AddTrans url={url} />
+                    </div>
+                    <TransactionList error={error} isPending={isPending} transactions={transactions} url={url} totalSpending={totalSpending} setTotalSpending={setTotalSpending} />
+                </>
+            }
         </div>
     )
 }
