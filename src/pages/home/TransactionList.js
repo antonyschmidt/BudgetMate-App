@@ -1,9 +1,9 @@
-//hooks
-import { useRef, useState, useEffect } from 'react'
+import { useDelete } from '../../hooks/useDelete'
 // styles
 import styles from './TransactionList.css'
 
-export default function TransactionList({ totalSpending, transactions, isPending, error }) {
+export default function TransactionList({ totalSpending, transactions, isPending }) {
+    const { error, deleteTransaction } = useDelete('transactions')
 
     return (
         <ul className='card-container'>
@@ -14,7 +14,7 @@ export default function TransactionList({ totalSpending, transactions, isPending
                 <li key={transaction.id}>
                     <h3>{transaction.title}</h3>
                     <p>{transaction.price} $</p>
-                    <div className='delete'>x</div>
+                    <div className='delete' onClick={() => deleteTransaction(transaction.id)}>x</div>
                 </li>
             ))}
             <p className='total-spending'>Total Spending : <span>{totalSpending} $</span></p>
