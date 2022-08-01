@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
+//hooks
+import { useLogout } from '../hooks/useLogout'
 //styles
 import styles from './Navbar.css'
 
 export default function Navbar() {
-    const handleClick = () => {
-
-    }
+    const { error, logout } = useLogout()
 
     return (
         <nav className='navbar'>
@@ -30,8 +30,8 @@ export default function Navbar() {
                         Signup
                     </Link>
                 </li>
-                <li>
-                    <button className='btn' onClick={handleClick}>Logout</button>
+                <li onClick={() => logout()}>
+                    <button className='btn'>Logout</button>
                 </li>
             </ul>
         </nav>
