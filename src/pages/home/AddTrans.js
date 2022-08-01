@@ -1,22 +1,21 @@
 import { useState } from 'react'
 //hooks
-import { useAddTrans } from '../../hooks/useAddTrans'
+import { useAdd } from '../../hooks/useAdd'
 // styles
 import styles from './AddTrans.css'
 
-export default function AddTrans({ url }) {
+export default function AddTrans() {
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
-    const { addTransaction, error, isPending } = useAddTrans()
+    const { error, isPending, addTransaction } = useAdd('transactions')
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        addTransaction(title, price, url)
+        addTransaction(title, price)
 
         setTitle('')
         setPrice('')
-        location.reload()
     }
 
     return (
@@ -39,9 +38,7 @@ export default function AddTrans({ url }) {
                         value={price}
                     />
                 </label>
-                {!isPending && <button className='btn'>Add Item</button>}
-                {isPending && <button className='btn' disabled>Loading...</button>}
-                {error && <p>{error}</p>}
+                <button className='btn'>Add Item</button>
             </form>
         </div>
     )

@@ -4,6 +4,7 @@
     padding: 30px;
     border: 1px solid lightgray;
     box-shadow: 2px 2px 2px lightgray;
+    position: relative;
 }
 
 .card-container h2 {
@@ -20,4 +21,14 @@
 .total-spending span {
     font-weight: bold;
     color: red;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    background-color: lightgray;
+    cursor: pointer;
+    font-weight: bold;
 }
