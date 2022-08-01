@@ -7,12 +7,12 @@ import styles from './Signup.css'
 export default function Signup() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const { user, error, createUser } = useSignup()
+    const { error, signupUser } = useSignup()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        await createUser(email, password)
+        await signupUser(email, password)
 
         setEmail('')
         setPassword('')
@@ -39,6 +39,7 @@ export default function Signup() {
                     />
                 </label>
                 <button className='btn'>Sign Up</button>
+                {error && <p className='error'>{error}</p>}
             </form>
         </div>
     )
