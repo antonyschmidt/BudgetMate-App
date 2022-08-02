@@ -15,7 +15,7 @@ export const useAdd = (c) => {
 
         addDoc(ref, { title, price })
             .then((res) => {
-                if (!res.ok) {
+                if (!res) {
                     throw new Error('Failed to add new Transaction')
                 }
 
