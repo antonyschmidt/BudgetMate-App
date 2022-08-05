@@ -1,6 +1,7 @@
 import { useState } from 'react'
 //hooks
 import { useAdd } from '../../hooks/useAdd'
+import { useAuthContext } from '../../hooks/useAuthContext'
 // styles
 import styles from './AddTrans.css'
 
@@ -8,11 +9,12 @@ export default function AddTrans() {
     const [title, setTitle] = useState('')
     const [price, setPrice] = useState('')
     const { error, isPending, addTransaction } = useAdd('transactions')
+    const { user } = useAuthContext()
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        addTransaction(title, price)
+        addTransaction(title, price, user.uid)
 
         setTitle('')
         setPrice('')

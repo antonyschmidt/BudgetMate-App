@@ -11,29 +11,31 @@ import Navbar from './components/Navbar'
 import { useAuthContext } from './hooks/useAuthContext'
 
 export default function App() {
-  const { user } = useAuthContext()
+  const { user, authReady } = useAuthContext()
 
   return (
     <div className="App">
 
-      <BrowserRouter>
-        <Navbar />
+      {authReady &&
+        <BrowserRouter>
+          <Navbar />
 
-        <Switch>
-          <Route exact path='/'>
-            {user && <Home />}
-            {!user && <Redirect to='/login' />}
-          </Route>
-          <Route path='/signup'>
-            {!user && <Signup />}
-            {user && <Redirect to='/' />}
-          </Route>
-          <Route path='/login'>
-            {!user && <Login />}
-            {user && <Redirect to='/' />}
-          </Route>
-        </Switch>
-      </BrowserRouter>
+          <Switch>
+            <Route exact path='/'>
+              {user && <Home />}
+              {!user && <Redirect to='/login' />}
+            </Route>
+            <Route path='/signup'>
+              {!user && <Signup />}
+              {user && <Redirect to='/' />}
+            </Route>
+            <Route path='/login'>
+              {!user && <Login />}
+              {user && <Redirect to='/' />}
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      }
     </div>
   )
 }

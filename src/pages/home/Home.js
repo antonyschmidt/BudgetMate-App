@@ -13,8 +13,11 @@ import { useAuthContext } from '../../hooks/useAuthContext'
 export default function Home() {
     const [balance, setBalance] = useState(300)
     const [totalSpending, setTotalSpending] = useState(0)
-    const { documents: transactions, isPending, error } = useCollection('transactions')
     const { user } = useAuthContext()
+    const { documents: transactions, isPending, error } = useCollection(
+        'transactions',
+        ['uid', '==', user.uid]
+    )
 
     return (
         <div className='homepage'>
