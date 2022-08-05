@@ -1,6 +1,5 @@
 //react router dom
-import { BrowserRouter } from 'react-router-dom'
-import { Route, Switch, Redirect } from 'react-router'
+import { Routes, Route, Navigate, BrowserRouter } from 'react-router-dom'
 // pages
 import Home from './pages/home/Home'
 import Signup from './pages/signup/Signup'
@@ -20,20 +19,11 @@ export default function App() {
         <BrowserRouter>
           <Navbar />
 
-          <Switch>
-            <Route exact path='/'>
-              {user && <Home />}
-              {!user && <Redirect to='/login' />}
-            </Route>
-            <Route path='/signup'>
-              {!user && <Signup />}
-              {user && <Redirect to='/' />}
-            </Route>
-            <Route path='/login'>
-              {!user && <Login />}
-              {user && <Redirect to='/' />}
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path='/' element={user ? (<Home />) : (<Navigate to='/login' />)} />
+            <Route path='/signup' element={!user ? (<Signup />) : (<Navigate to='/' />)} />
+            <Route path='/login' element={!user ? (<Login />) : (<Navigate to='/' />)} />
+          </Routes>
         </BrowserRouter>
       }
     </div>
